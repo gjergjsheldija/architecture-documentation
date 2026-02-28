@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@markdown-confluence/cli": "^5.5.2"
+  }
+}

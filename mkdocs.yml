@@ -1,0 +1,64 @@
+site_name: Architecture Documentation
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mermaid2
+  - with-pdf:
+      author: Gjergj Sheldija
+      copyright: "2026"
+      cover: true
+      back_cover: true
+      toc_title: Table of Contents
+      enabled_if_env: ENABLE_PDF_EXPORT
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      toc_depth: 0
+nav:
+- Home: index.md
+- 01 Introduction and Goals: 01_introduction_and_goals/index.md
+- 02 Architecture Constraints: 02_architecture_constraints/index.md
+- 03 System Scope and Context: 03_system_scope_and_context/index.md
+- 04 Solution Strategy: 04_solution_strategy/index.md
+- 05 Building Block View: 05_building_block_view/index.md
+- 06 Runtime View: 06_runtime_view/index.md
+- 07 Deployment View: 07_deployment_view/index.md
+- 08 Cross-cutting Concepts: 08_cross_cutting_concepts/index.md
+- 09 Architectural Decisions: 09_architectural_decisions/index.md
+- 10 Quality Requirements: 10_quality_requirements/index.md
+- 11 Risks and Technical Debt: 11_risks_and_technical_debt/index.md
+- 12 Glossary: 12_glossary/index.md
